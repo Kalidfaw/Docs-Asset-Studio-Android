@@ -1,0 +1,7 @@
+{
+  "appId": "com.khalidfaouzi.docsassetstudio",
+  "appName": "Docs Asset Studio",
+  "webDir": "dist",
+  "backgroundColor": "#e2e8f0",
+  "android": { "allowMixedContent": false }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Docs Asset Studio</string>
+    <string name="title_activity_main">Docs Asset Studio</string>
+    <string name="package_name">com.khalidfaouzi.docsassetstudio</string>
+    <string name="custom_url_scheme">com.khalidfaouzi.docsassetstudio</string>
+</resources>

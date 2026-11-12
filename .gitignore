@@ -1,0 +1,8 @@
+node_modules/
+release/
+dist/
+e2e/fixtures/
+__pycache__/
+*.jks
+*.keystore
+local.properties

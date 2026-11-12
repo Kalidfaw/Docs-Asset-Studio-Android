@@ -1,0 +1,86 @@
+{
+  "name": "docs-asset-studio",
+  "version": "0.14.0",
+  "private": true,
+  "type": "module",
+  "description": "استخراج صور المستندات (PPTX, DOCX) وتنظيفها وكشف المكرر منها — يعمل محلياً بالكامل",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test",
+    "e2e": "node build.mjs && node e2e/e2e.cjs",
+    "start": "node build.mjs && electron .",
+    "dist:win": "node build.mjs && electron-builder --win",
+    "build:protected": "node build.mjs --protect",
+    "dist:win:protected": "node build.mjs --protect && electron-builder --win",
+    "dist:dir": "node build.mjs && electron-builder --dir",
+    "e2e:electron": "node build.mjs && xvfb-run -a node e2e/electron.cjs && xvfb-run -a node e2e/electron-fullscreen.cjs"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.0",
+    "@fontsource-variable/cairo": "^5.3.0",
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0",
+    "esbuild": "^0.25.0",
+    "javascript-obfuscator": "^5.10.0",
+    "jszip": "3.10.1",
+    "pdfjs-dist": "^6.5.438"
+  },
+  "main": "electron/main.cjs",
+  "author": "Jinji",
+  "build": {
+    "appId": "com.jinji.docsassetstudio",
+    "productName": "Docs Asset Studio",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**",
+      "dist/index.html",
+      "dist/app.js",
+      "dist/fonts/**",
+      "dist/style.css",
+      "build/icon.png",
+      "package.json"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    },
+    "compression": "maximum",
+    "electronLanguages": [
+      "ar",
+      "fr",
+      "en-US"
+    ]
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/share": "^8.0.3"
+  }
+}

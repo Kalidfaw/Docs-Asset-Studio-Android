@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#3730a3"/>
+    </linearGradient>
+    <linearGradient id="pic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+  <!-- البلاطة -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg)"/>
+  <!-- المستند الخلفي (طبقة) -->
+  <rect x="132" y="92" width="224" height="288" rx="26" fill="#fff" opacity=".38" transform="rotate(-9 244 236)"/>
+  <!-- المستند الأمامي بزاوية مطويّة -->
+  <path d="M152 100h140l76 76v204a28 28 0 0 1-28 28H152a28 28 0 0 1-28-28V128a28 28 0 0 1 28-28z" fill="#fff"/>
+  <path d="M292 100v52a24 24 0 0 0 24 24h52z" fill="#c7d2fe"/>
+  <!-- إطار الصورة المستخرجة -->
+  <rect x="156" y="228" width="180" height="124" rx="16" fill="url(#pic)"/>
+  <circle cx="294" cy="268" r="17" fill="#e0e7ff"/>
+  <path d="M156 336l58-62a10 10 0 0 1 15 0l36 40 22-23a10 10 0 0 1 15 0l34 36v16a16 16 0 0 1-16 16H172a16 16 0 0 1-16-16z" fill="#fff" opacity=".92"/>
+  <!-- سهم الاستخراج -->
+  <circle cx="378" cy="372" r="52" fill="#fff"/>
+  <circle cx="378" cy="372" r="42" fill="#4f46e5"/>
+  <path d="M378 350v36m-16-14l16 16 16-16" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
